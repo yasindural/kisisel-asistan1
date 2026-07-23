@@ -1,34 +1,20 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
+/* ARIA — app-level styles. Design tokens live in index.css */
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
+.App {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
 }
 
-.App-link {
-    color: #61dafb;
+/* Calendar drag states */
+.cal-day-droptarget {
+    outline: 2px dashed hsl(var(--accent-copper));
+    outline-offset: -2px;
+    background: hsl(var(--accent-copper) / 0.06);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.event-chip {
+    cursor: grab;
+}
+
+.event-chip:active {
+    cursor: grabbing;
 }
